@@ -1,0 +1,64 @@
+{
+    "name":"Персонаж для тестирования",
+    "player":"Господь-Бог",
+    "color":"green",
+    "stats":{
+        "health":50,
+        "energy":0,
+        "main":{
+	    "strength":5,
+	    "agility":5,
+	    "perception":5,
+	    "intelligence":5,
+	    "stamina":5,
+	    "speed":5
+	},
+	"action":0,
+    },
+    "inventory":{
+	"clothes": {
+	    "head": {"name": "Пусто", ""},
+	    "torso": {},
+	    "hands": {},
+	    "legs": {},
+	    "belt": {},
+	    "gerb_coat": {},
+	    "neck": {},
+	    "ring": [
+		{},
+		{}
+	    ],
+	    "wrist": {},
+	    "ear": {},
+	    "cloak": {}
+	},
+	"weapon": {
+	    "belt":[
+		{},
+		{},
+		{},
+		{}
+	    ],
+	    "back":[
+		{},
+		{}
+	    ]
+	},
+	"bags": {
+	    "bag": [
+		{},
+		{}
+	    ],
+	    "ammo": {},
+	    "flask": {}
+	},
+	"artefact": {}
+    },
+    "skills":{
+	
+    },
+    "effects":[
+	{"name":"Тест1", "description":"Какой-то текст", "effect":["main", "agility"], "change":1, "duration":-1 },
+	{"name":"Тест2", "description":"Какой-то текст", "effect":["main", "speed"], "change":-1, "duration":10 }
+    ]
+}
