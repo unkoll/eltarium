@@ -1,0 +1,43 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+.world {
+    width: 1000px;
+    height: 300px;
+    position: relative;
+}
+
+
+.world div {
+    width: 1000px;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+
+
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.delete {
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 470px;
+    position: absolute;
+
+
+    z-index: 255;
+}
+
+.delete img {
+    height: 30px;
+    width: 30px;
+
+}

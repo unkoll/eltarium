@@ -1,0 +1,199 @@
+#character {
+    text-align: center;
+    padding: 3px;
+}
+#left {
+    width: 250px;
+    background-color: #3c76ae;
+}
+#right {
+    width: 717px;
+    background-color: #6493cd;
+}
+#avatar {
+    width: 240px;
+    display: block;
+}
+#calculate {
+    margin-left: 25px;
+    margin-top:25px;
+}
+#main {
+    position: relative;
+}
+#parameters {
+    position: relative;
+}
+
+#distribute {
+    background-color: #3c76ae;
+    opacity: 0.95;
+    border-radius: 5px;
+    position: absolute;
+
+    top: -1pt;
+    left: 250px;
+}
+#distribute input {
+    font-size: xx-small;
+    height: 14px;
+}
+
+.info{
+    padding: 5px;
+    width: 300px;
+    background-color: #404040;
+    opacity: 0.9;
+    border: 1px solid white;
+    position: absolute;
+    z-index: 255;
+}
+.minfo{
+    width: 140px;
+    background-color: #656565;
+    opacity: 0.9;
+    border: 1px solid white;
+    position: absolute;
+}
+.hide{
+    display: none;
+}
+
+
+.main_button{
+    margin-left: 5px;
+    width: 200px;
+    height: 50px;
+}
+.money {
+    width: 30px;
+    height: 30px;
+}
+.active {
+    border: 5px solid green;
+}
+.slot {
+    width: 60px;
+    height: 60px;
+}
+.icon {
+    width: 56px;
+    height: 56px;
+}
+.section {
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+}
+.cur_indicator {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 20px;
+}
+.indicator {
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 420px;
+    height: 20px;
+
+    text-align: center;
+}
+.category {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.effect {
+    position: relative;
+    font-size: large;
+}
+.additional_panel {
+    background-color: #3c76ae;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 254;
+    left: 480px;
+    padding: 10px;
+
+    width: 400px;
+}
+.expend {
+    width: 50px;
+}
+.expend_field{
+    width: 50px;
+}
+
+
+.choose div {
+    box-sizing: border-box;
+    width: 50%;
+    height: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+
+    float: left;
+}
+.bordered_xtop {
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.unactive {
+    border-bottom: 1px solid white;
+    background-color: #2d5781;
+}
+.full {
+    width: 100%;
+    height: 30px;
+}
+.centred {
+    text-align: center;
+}
+
+
+#action_content {
+    background-color: #4487c7;
+}
+
+
+/*SPELL*/
+#spellbook div.bordered_xtop div.bordered_xtop{
+    box-sizing: border-box;
+    height: 680px;
+    width: 100%;
+}
+#perk {
+    box-sizing: border-box;
+    height: 750px;
+    width: 100%;
+}
+.spell {
+    box-sizing: border-box;
+    background-color: #4281be;
+    border-radius: 50px;
+    width: 50%;
+    height: 60px;
+    float: left;
+}
+.spell_icon {
+    margin-left: 15px;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+.spell_name {
+    margin-left: 5px;
+    margin-top: 15px;
+}

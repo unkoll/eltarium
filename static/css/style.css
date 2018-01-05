@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Calibri light";
+    src: url("/static/calibiri.ttf");
+}
+
+
+input {
+    font-family: "Calibri light";
+    font-size: large;
+    border-radius: 5px;
+}
+textarea {
+    font-family: "Calibri light";
+    font-size: large;
+    border-radius: 5px;
+}
+body {
+    background-color: #91bdeb;
+    color: white;
+    font-family: "Calibri light";
+}
+strong{
+    font-size: large;
+}
+
+
+#content {
+    width : 1000px;
+    margin: auto;
+}
+#prompt {
+    width: 500px;
+    background-color: #3c76ae;
+
+    position: relative;
+    margin: auto;
+    top: 100px;
+
+    padding: 20px;
+}
+
+
+
+
+.main_column {
+    background-color: #3c76ae;
+}
+.pad {
+    padding: 10px;
+}
+.tab {
+    margin-left: 20px;
+}
+.lefted {
+    float: left;
+}
+.righted {
+    float: right;
+}
+.bordered {
+    border-radius:10px;
+    border: 1px solid white;
+}
+.column {
+    float: left;
+    padding: 5px;
+
+    margin:2px;
+}
+.clean {
+    clear: both;
+}
+
+
+#heading {
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+}
+
+#create {
+    width: 300px;
+    height: 30px;
+    background-color: grey;
+    text-align: center;
+    border-radius: 50px;
+}
