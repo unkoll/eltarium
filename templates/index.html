@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <link rel="stylesheet" href="\css\style.css">
+    <link rel="stylesheet" href="\css\index.css">
+    <meta charset="UTF-8">
+    <title>Выбор мира</title>
+</head>
+<body>
+    <div id="content" class="pad bordered main_column">
+        <div id="heading"> Список миров: </div>
+        {% for world in worlds %}
+            <div class="world">
+                <a href ='\world\{{world.world_id}}'>
+                <img src="{{ world.icon }}"> <br>
+                <div>
+                    {{ world.name }}
+                </div>
+                </a>
+                <div class="delete" id="{{world.world_id}}"> <img src="/delete.png">  </div>
+            </div>
+        {% endfor %}
+        <a href="\create">
+            <div id="create" class="bordered righted">
+                 Создать новый мир
+            </div>
+        </a>
+    </div>
+</body>
+
+<script>
+    $('.delete').bind('click', function(){
+    var world_id =  $(this).attr('id');
+    if (confirm('Вы уверены, что хотите удалить этот мир?')){
+        alert('Мир успешно удален!');
+    }
+});
+</script>
+
+</html>

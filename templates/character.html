@@ -1,0 +1,584 @@
+<!DOCTYPE>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/character.css">
+    <script type="text/javascript" src="/static/script/jquery.min.js"> </script>
+    <title id="name"> Эльтариум </title>
+</head>
+<body>
+    <div id="content">
+        <div id="character" class="bordered" style="background-color: green"> Персонаж ТЕСТ (управляется ТЕСТ) </div>
+        <div id="left" class="bordered column">
+            <div class="category"> Характеристики </div>
+            <div class="lefted">
+                Основные:
+            </div>
+            <div class="righted">
+                <span id="free"> 2 </span> <input type="button" id="distribute_stats" value="Распределить">
+            </div>
+            <br class="clean">
+            <div id="main">
+                <div class="tab lefted">
+                    Сила: <br>
+                    Ловкость: <br>
+                    Восприятие: <br>
+                    Интеллект: <br>
+                    Выносливость: <br>
+                    Скорость: <br>
+                </div>
+                <div class="righted">
+                    <span id="strength"> 5 </span> <br>
+                    <span id="agility"> 5 </span> <br>
+                    <span id="perception"> 5 </span> <br>
+                    <span id="intelligence"> 5 </span> <br>
+                    <span id="stamina"> 5 </span> <br>
+                    <span id="speed"> 5 </span> <br>
+                </div>
+                <div id="distribute" class="hide">
+                    <input type="button" name="strength" class="plus" value="+">
+                    <input type="button" name="strength" class="minus" value="-">
+                    <br>
+                    <input type="button" name="agility" class="plus" value="+">
+                    <input type="button" name="agility" class="minus" value="-">
+                    <br>
+                    <input type="button" name="perception" class="plus" value="+">
+                    <input type="button" name="perception" class="minus" value="-">
+                    <br>
+                    <input type="button" name="intelligence" class="plus" value="+">
+                    <input type="button" name="intelligence" class="minus" value="-">
+                    <br>
+                    <input type="button" name="stamina" class="plus" value="+">
+                    <input type="button" name="stamina" class="minus" value="-">
+                    <br>
+                    <input type="button" name="speed" class="plus" value="+">
+                    <input type="button" name="speed" class="minus" value="-">
+                    <br> <br>
+                    <input type="button" style="font-size:small; height:18px;" id="distribute_submit" value="Принять">
+                </div>
+                <br class="clean">
+            </div>
+            <br>
+
+            <div class="lefted">
+                Сопротивления:
+            </div>
+            <br class="clean">
+
+            <div id="resist">
+                <div class="tab lefted">
+                    Физический урон: <br>
+                    Энергетический урон: <br>
+                    Яды: <br>
+                    Воля: <br>
+                </div>
+                <div class="righted">
+                    <span id="phys"> -1 </span> <br>
+                    <span id="energy"> -1 </span> <br>
+                    <span id="poison"> -1 </span> <br>
+                    <span id="will"> -1 </span> <br>
+                </div>
+                <br class="clean">
+            </div>
+            <br>
+
+            <div class="lefted">
+                Критические эффекты:
+            </div>
+            <br class="clean">
+            <div id="critical">
+                <div class="tab lefted">
+                    Критический удар: <br>
+                    Горение: <br>
+                    Кровотечение: <br>
+                    Оглушение: <br>
+                    Контратака: <br>
+                    Исступление: <br>
+                    Двойной удар: <br>
+                    Отравление: <br>
+                    Замедление: <br>
+                    Точный удар: <br>
+                    Игнорирование брони: <br>
+                </div>
+                <div class="righted">
+                    <span id="crit"> -1 </span> <br>
+                    <span id="burning"> -1 </span> <br>
+                    <span id="bleed"> -1 </span> <br>
+                    <span id="stun"> -1 </span> <br>
+                    <span id="counter_attack"> -1 </span> <br>
+                    <span id="enrage"> -1 </span> <br>
+                    <span id="double_strike"> -1 </span> <br>
+                    <span id="poisoned"> -1 </span> <br>
+                    <span id="delay"> -1 </span> <br>
+                    <span id="exact_strike"> -1 </span> <br>
+                    <span id="armor_ignoring"> -1 </span> <br>
+                </div>
+                <br class="clean">
+            </div>
+            <br>
+
+            <div class="category"> Шансы </div>
+
+            <div class="lefted">
+                Боевые:
+            </div>
+            <br class="clean">
+            <div id="bchance">
+                <div class="tab lefted">
+                    Одноручное: <br>
+                    Двуручное: <br>
+                    Луки: <br>
+                    Арбалеты: <br>
+                    Огнестрельное: <br>
+                    Кулачный бой: <br>
+                    Магия: <br>
+                    <div class="tab">
+                        Ритуалы <br>
+                        Руны <br>
+                        Заклинания <br>
+                        Абсолютная <br>
+                    </div>
+                    Уклонение: <br>
+                    Блокирование: <br>
+                </div>
+                <div class="righted">
+                    <span id="one_handed"> -1 </span> <br>
+                    <span id="two_handed"> -1 </span> <br>
+                    <span id="bow"> -1 </span> <br>
+                    <span id="arbalest"> -1 </span> <br>
+                    <span id="fire"> -1 </span> <br>
+                    <span id="fists"> -1 </span> <br>
+                    <br>
+                    <span id="ritual_magic"> -1 </span> <br>
+                    <span id="rune_magic"> -1 </span> <br>
+                    <span id="spell_magic"> -1 </span> <br>
+                    <span id="absolute_magic"> -1 </span> <br>
+
+                    <span id="evasion"> -1 </span> <br>
+                    <span id="blocking"> -1 </span> <br>
+                </div>
+                <br class="clean">
+            </div>
+            <br>
+
+            <div class="lefted">
+                Мирные:
+            </div>
+            <br class="clean">
+            <div id="pchance">
+                <div class="tab lefted">
+                    Наука: <br>
+                    Логика: <br>
+                    Азартные игры: <br>
+                    Скрытность: <br>
+                    Взлом: <br>
+                    Убеждение: <br>
+                </div>
+                <div class="righted">
+                    <span id="science"> 5 </span> <br>
+                    <span id="logic"> 5 </span> <br>
+                    <span id="gambling"> 0 </span> <br>
+                    <span id="sneak"> 0 </span> <br>
+                    <span id="lock_picking"> 0 </span> <br>
+                    <span id="persuasion"> 0 </span> <br>
+                </div>
+                <br class="clean">
+            </div>
+            <br>
+
+            <div class="category"> Навыки </div>
+            <br>
+            <input type="button" value="Открыть меню навыков" style="width: 250px">
+
+        </div>
+        <div id="right" class="bordered column">
+            <div>
+                <div class="lefted">
+                    <img id="avatar" class="bordered" src="/static/icon_druzhko.png">
+                </div>
+                <div id="parameters" class="lefted pad">
+                    <div id="effect_panel" class="pad bordered additional_panel hide">
+                        <div class="section">
+                            Эффекты <input type="button" class="righted" id="effect_add" value="Добавить">
+
+                        </div> <br>
+                        <div id="effect_content"> </div> <br>
+                        <input type="button" class="full"  name="effect_clean" value="Очистить временные эффекты">
+                    </div>
+                    <div id="action_panel" class="bordered additional_panel hide">
+                        <div class="section">
+                            Действия
+                        </div> <br>
+                        <div id="action_content">
+                            <div class="choose">
+                                <div second="admin" id="battleXopen" class="var"> Бой </div>
+                                <div second="battle" id="adminXopen" class="var unactive"> Админ </div>
+                            </div> <br class="clean">
+                            <div id="battle" class="pad bordered_xtop">
+                                <br>
+                                <input type="button" class="full" id="start_battle" value="Начать бой">
+                                <input type="button" class="full" id="next_turn" value="Следующий ход">
+                                <input type="button" class="full" name="effect_clean" value="Очистить временные эффекты"> <br> <br>
+                                <input type="button" class="full" id="spellbook_open" value="Книга заклинаний"> <br>
+                                <br>
+                                <div class="lefted"> Потратить очки действия: </div>
+                                <div class="righted"> <input type="number" class="expend_field" expended="action"> <input type="button" class="expend" name="action" value="ОК"> </div>
+                                <br class="clean">
+                                <div class="lefted"> Потратить энергию: </div>
+                                <div class="righted">  <input type="number" class="expend_field" expended="energy"> <input type="button" class="expend" name="energy" value="ОК"> </div>
+                                <br class="clean">
+                                <div class="pad">
+                                    <div class="choose">
+                                        <div second="dmg_deal" id="dmg_getXopen" class="var"> Получение урона </div>
+                                        <div second="dmg_get" id="dmg_dealXopen" class="var unactive"> Нанесение урона </div>
+                                    </div> <br class="clean">
+                                    <div id="dmg_get" class="pad bordered_xtop">
+                                        <br>
+                                        <div class="lefted"> Уклонение: </div>
+                                        <div class="righted" id="evasion_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Блокирование: </div>
+                                        <div class="righted" id="blocking_act"> </div>   <br class="clean">
+                                        <div class="lefted"> Контратака: </div>
+                                        <div class="righted" id="counter_attack_act"> </div>  <br class="clean">
+                                        <br>
+                                        Урон:
+                                        <div class="righted">
+                                        <select id="dmg_type">
+                                            <option value="phys"> Физический </option>
+                                            <option value="energy"> Энергетический </option>
+                                            <option value="poison"> Яд </option>
+                                            <option value="true"> Чистый </option>
+                                        </select>
+                                        <input type="number" id="dmg" style="width:50px">
+                                        <input type="button" id="dmg_submit" value="OK">
+                                        </div>
+                                        <br class="clean">
+                                    </div>
+                                    <div id="dmg_deal" class="pad bordered_xtop hide">
+                                        <br>
+                                        Оружие:
+                                        <div class="bordered pad tab" id="damage"> </div>
+                                        <br>
+                                        <div class="lefted"> Критический удар: </div>
+                                        <div class="righted" id="crit_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Горение: </div>
+                                        <div class="righted" id="burning_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Кровотечение: </div>
+                                        <div class="righted" id="bleed_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Оглушение: </div>
+                                        <div class="righted" id="stun_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Отравление: </div>
+                                        <div class="righted" id="poisoned_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Замедление: </div>
+                                        <div class="righted" id="delay_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Точный удар: </div>
+                                        <div class="righted" id="exact_strike_act">  </div>   <br class="clean">
+                                        <div class="lefted"> Игнорирование брони: </div>
+                                        <div class="righted" id="armor_ignoring_act">  </div>   <br class="clean">
+                                        <br>
+                                        <div class="lefted"> Исступление: </div>
+                                        <div class="righted" id="enrage_act">  </div>   <br class="clean">
+                                        <input class="full" type="button" id="enrage_use" value="Войти в исступление">
+                                        <br class="clean">
+                                    </div>
+                                </div>
+                                <div class="centred">
+                                    <iframe src="https://www.random.org/widgets/integers/iframe.php?title=D6&amp;buttontxt=%D0%91%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C&amp;width=120&amp;height=225&amp;border=off&amp;bgcolor=%233c76ae&amp;txtcolor=%23FFFFFF&amp;altbgcolor=%234487c7&amp;alttxtcolor=%23FFFFFF&amp;defaultmin=1&amp;defaultmax=6&amp;fixed=on" frameborder="0" width="120" height="225" scrolling="no" longdesc="https://www.random.org/integers/">
+                                        The numbers generated by this widget come from RANDOM.ORG's true random number generator.
+                                    </iframe>
+                                    <iframe src="https://www.random.org/widgets/integers/iframe.php?title=D10&amp;buttontxt=%D0%91%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C&amp;width=120&amp;height=225&amp;border=off&amp;bgcolor=%233c76ae&amp;txtcolor=%23FFFFFF&amp;altbgcolor=%234487c7&amp;alttxtcolor=%23FFFFFF&amp;defaultmin=0&amp;defaultmax=9&amp;fixed=on" frameborder="0" width="120" height="225" scrolling="no" longdesc="https://www.random.org/integers/">
+                                        The numbers generated by this widget come from RANDOM.ORG's true random number generator.
+                                    </iframe>
+                                    <iframe src="https://www.random.org/widgets/integers/iframe.php?title=D100&amp;buttontxt=%D0%91%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C&amp;width=120&amp;height=225&amp;border=off&amp;bgcolor=%233c76ae&amp;txtcolor=%23FFFFFF&amp;altbgcolor=%234487c7&amp;alttxtcolor=%23FFFFFF&amp;defaultmin=0&amp;defaultmax=99&amp;fixed=on" frameborder="0" width="120" height="225" scrolling="no" longdesc="https://www.random.org/integers/">
+                                        The numbers generated by this widget come from RANDOM.ORG's true random number generator.
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div id="admin" class="pad bordered_xtop hide"> <br>
+                                Сменить имя персонажа: <br>
+                                <div class="centred">
+                                    <input type="text" style="width:300px" name="name_val" placeholder="Введите новое имя"> <input type="button" value="OK" style="width:50px" class="change" name="name" >
+                                </div>
+                                Сменить имя игрока: <br>
+                                <div class="centred">
+                                    <input type="text" style="width:300px" name="player_val" placeholder="Введите новое имя"> <input type="button" value="OK" style="width:50px" class="change" name="player" >
+                                </div>
+                                Сменить аватарку: <br>
+                                <div class="centred">
+                                    <input type="text" style="width:300px" name="avatar_val" placeholder="Введите адрес картинки"> <input type="button" value="OK" style="width:50px" class="change" name="avatar" >
+                                </div>
+                                <br><br>
+                                Добавить очки навыка: <br>
+                                <div class="centred">
+                                    <select id="skill_add_select">
+
+                                    </select>
+                                    <input type="number" id="skill_add_val" style="width:70px">
+                                    <input type="button" id="skill_add_sumbit" value="OK">
+                                </div>
+                                Добавить валюту: <br>
+                                <div class="centred">
+                                    <select id="money_add_select">
+
+                                    </select>
+                                    <input type="number" id="money_add_val" style="width:70px">
+                                    <input type="button" id="money_add_sumbit" value="OK">
+                                </div>
+                                <input type="button" class="full" id="add_item" value="Добавить предмет">
+                                <input type="button" class="full" id="reset_stats" value="Сбросить характеристики">
+                            </div>
+                        </div>
+                        <br>
+
+                    </div>
+                    Здоровье:
+                    <div class="indicator">
+                        <div id="health_indicator" class="cur_indicator" style="width: 20px; background-color: #009b00"> </div>
+                        <span id="health_cur"> 5 </span> /
+                        <span id="health_max"> 100 </span>
+                        ( <span id="health_recovery"> 1 </span> в час)
+                    </div> <br>
+                    Энергия:
+                    <div class="indicator">
+                        <div id="energy_indicator" class="cur_indicator" style="width: 300px; background-color: #1676cd"> </div>
+                        <span id="energy_cur"> 65 </span> /
+                        <span id="energy_max"> 100 </span>
+                        (<span id="energy_recovery"> 5 </span> в час)
+                    </div> <br>
+                    Очки действия:
+                    <div class="indicator">
+                        <div id="action_indicator" class="cur_indicator" style="width: 200px; background-color: #cbcb00"> </div>
+                        <span id="action_cur"> 40 </span> /
+                        <span id="action_max"> 100 </span>
+                        (<span id="action_recovery"> 20</span> в ход |
+                        <span id="action_base"> 35</span> в начале хода)
+                    </div>
+                    <br>
+                    <input type="button" class="main_button" id="action_open" value="Действия">
+                    <input type="button" class="main_button" id="effect_open" value="Панель эффектов">
+
+                </div>
+            </div>
+            <hr class="clean">
+            <div id="inventory">
+                <div class="section"> Снаряжение </div>
+                <br>
+                <div class="tab lefted">
+                    Одежда: <br>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="head" src="/static/icon/armor/empty/head.gif">
+                        <div id="head_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="torso" src="/static/icon/armor/empty/torso.gif">
+                        <div id="torso_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="hands" src="/static/icon/armor/empty/hands.gif">
+                        <div id="hands_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="legs" src="/static/icon/armor/empty/legs.gif">
+                        <div id="legs_info" class="tab hide info"> Пусто </div>
+                    </div>
+                    <br class="clean">
+                    <div class="lefted pad slot">
+                        <img class="icon" id="ear" src="/static/icon/jewelry/empty/ear.gif">
+                        <div id="ear_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="belt" src="/static/icon/jewelry/empty/belt.gif">
+                        <div id="belt_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="wrist" src="/static/icon/jewelry/empty/wrist.gif">
+                        <div id="wrist_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="ring_1" src="/static/icon/jewelry/empty/ring_1.gif">
+                        <div id="ring_1_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <br class="clean">
+                    <div class="lefted pad slot">
+                        <img class="icon" id="neck" src="/static/icon/jewelry/empty/neck.gif">
+                        <div id="neck_info" class="tab hide info"> Пусто </div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="cloak" src="/static/icon/jewelry/empty/cloak.gif">
+                        <div id="cloak_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="artefact" src="/static/icon/jewelry/empty/artefact.gif">
+                        <div id="artefact_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="ring_2" src="/static/icon/jewelry/empty/ring_2.gif">
+                        <div id="ring_2_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <br class="clean">
+                    <div class="tab">
+                        Переносимый вес:  <strong id="weight_cur"> 100 </strong> / <strong id="weight_max"> 200 </strong> <br>
+                        Порог урона/брони: <strong id="dt"> 100 </strong> / <strong id="at"> 200 </strong> <br>
+                        Передвижение: <strong id="movement"> 100 </strong>
+                    </div>  <br>
+                </div>
+                <div class="tab lefted">
+                    Основной комплект оружия: <br>
+                    <div>
+                        <div class="lefted pad slot">
+                            <img id="weapon_main_main" class="icon" src="/static/icon/weapon/empty/main.gif">
+                            <div id="weapon_main_main_info" class="tab hide info"> Пусто</div>
+                        </div>
+                        <div class="lefted pad slot">
+                            <img id="weapon_main_offend" class="icon" src="/static/icon/weapon/empty/offend.gif">
+                            <div id="weapon_main_offend_info" class="tab hide info"> Пусто</div>
+                        </div>
+                        <div class="lefted pad"> <input value="Использовать" class="weapon_use" id="weapon_mainXuse" type="button"> </div>
+                    </div>
+                    <br class="clean">
+                    Дополнительный комплект оружия: <br>
+                    <div>
+                        <div class="lefted pad slot">
+                            <img id="weapon_additional_main" class="icon" src="/static/icon/weapon/empty/main.gif">
+                            <div id="weapon_additional_main_info" class="tab hide info"> Пусто</div>
+                        </div>
+                        <div class="lefted pad slot">
+                            <img id="weapon_additional_offend" class="icon" src="/static/icon/weapon/empty/offend.gif">
+                            <div id="weapon_additional_offend_info" class="tab hide info"> Пусто</div>
+                        </div>
+                        <div class="lefted pad"> <input value="Использовать" class="weapon_use" id="weapon_additionalXuse" type="button"> </div>
+                    </div>
+                    <br class="clean">
+                    Скрытый комплект оружия: <br>
+                    <div>
+                        <div class="lefted pad slot">
+                            <img id="weapon_hide_main" class="icon" src="/static/icon/weapon/empty/main.gif">
+                            <div id="weapon_hide_main_info" class="tab hide info"> Пусто</div>
+                        </div>
+                        <div class="lefted pad slot">
+                            <img id="weapon_hide_offend" class="icon" src="/static/icon/weapon/empty/offend.gif">
+                            <div id="weapon_hide_offend_info" class="tab hide info"> Пусто</div>
+                        </div>
+                        <div class="lefted pad"> <input value="Использовать" class="weapon_use" id="weapon_hideXuse" type="button"> </div>
+                    </div>
+                    <br class="clean">
+                </div>
+                <br class="clean">
+                <div class="tab lefted">
+                    Эликсиры: <br>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="flask_0" src="/static/icon/item/empty.gif">
+                        <div id="flask_0_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="flask_1" src="/static/icon/item/empty.gif">
+                        <div id="flask_1_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="flask_2" src="/static/icon/item/empty.gif">
+                        <div id="flask_2_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="flask_3" src="/static/icon/item/empty.gif">
+                        <div id="flask_3_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <br class="clean">
+                    Боеприпасы: <br>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="ammo_0" src="/static/icon/item/empty.gif">
+                        <div id="ammo_0_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="ammo_1" src="/static/icon/item/empty.gif">
+                        <div id="ammo_1_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="ammo_2" src="/static/icon/item/empty.gif">
+                        <div id="ammo_2_info" class="tab hide info"> Пусто</div>
+                    </div>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="ammo_3" src="/static/icon/item/empty.gif">
+                        <div id="ammo_3_info" class="tab hide info"> Пусто</div>
+                    </div>
+                </div>
+                <div class="tab lefted">
+                    Валюта: <br>
+                    <img class="money" id="ruby_icon" src="/static/icon/money/ruby.png"> <strong id="ruby"> 0 </strong>
+                    <div id="ruby_info" class="tab hide minfo">  Рубины </div> <br>
+
+                    <img class="money" id="emerald_icon" src="/static/icon/money/emerald.png">  <strong id="emerald"> 0 </strong>
+                    <div id="emerald_info" class="tab hide minfo"> Изумруды </div> <br>
+
+                    <img class="money" id="sapphire_icon" src="/static/icon/money/sapphire.png"> <strong id="sapphire"> 0 </strong>
+                    <div id="sapphire_info" class="tab hide minfo"> Сапфиры </div> <br>
+
+                    <img class="money" id="azar_icon" src="/static/icon/money/azar.png"> <strong id="azar"> 0 </strong>
+                    <div id="azar_info" class="tab hide minfo"> Азары </div> <br>
+
+                    <img class="money" id="ancient_icon" src="/static/icon/money/ancient.png">  <strong id="ancient"> 0 </strong>
+                    <div id="ancient_info" class="tab hide minfo"> Древние монеты </div>
+                    <br>
+                </div>
+                <div class="tab lefted">
+                    Документы: <br>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="docs" src="/static/icon/docs.png">
+                        <div id="docs_info" class="tab hide info"> Пусто</div>
+                    </div> <br>
+                    Используемая сумка: <br>
+                    <div class="lefted pad slot">
+                        <img class="icon" id="bag" src="/static/icon/item/empty.gif">
+                        <div id="bag_info" class="tab hide info"> Пусто</div>
+                    </div> <br class="clean">
+                </div>
+                <br class="clean">
+                <br>
+
+                <div class="tab for_bag">
+                    Сумка: <br>
+                </div>
+            </div>
+            <div id="spellbook" class="hide">
+                <div class="section"> Книга заклинаний   <input type="button" class=righted id="spell_add" value="Добавить"> </div> <br class="clean">
+                <div class="choose">
+                    <div class="var" id="spellXopen" second="perk"> Заклинания </div>
+                    <div class="var unactive" id="perkXopen" second="spell"> Способности </div>
+                </div>
+                <div id="spell" class="pad bordered_xtop">
+                    <br> <br>
+                    <div class="choose">
+                        <div class="var" id="elementsXopen" second="combinative"> Элементы </div>
+                        <div class="var unactive" id="combinativeXopen" second="elements"> Комбинаторные </div>
+                    </div>
+                    <div id="elements" class="pad bordered_xtop">
+
+                    </div>
+                    <div id="combinative" class="hide pad bordered_xtop">
+
+                    </div>
+                    <br class="clean">
+                </div>
+                <div id="perk" class="hide pad bordered_xtop">
+
+                </div>
+                <br class="clean">
+            </div>
+        </div>
+    </div>
+    <div id="prompt" class="bordered hide">
+        <div id="prompt_content">
+        </div>
+        <div id="prompt_footer">
+
+        </div>
+    </div>
+</body>
+<script src="/static/script/character/const.js"> </script>
+<script src="/static/script/character/web.js"> </script>
+<script src="/static/script/character/calculate.js"> </script>
+<script src="/static/script/character/init.js"> </script>
+<script src="/static/script/character/binds.js"> </script>
+<script src="/static/script/character/show.js"> </script>
+<script src="/static/script/character/actions.js"></script>
+<script src="/static/script/character.js"> </script>
+</html>
